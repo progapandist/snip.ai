@@ -1,0 +1,9 @@
+<div class="bg-gray-50 min-h-screen min-w-full flex place-content-center place-items-center">
+  <div class="w-1/2">
+    <%= form_with url: path, method: :get do |f| %>
+      <%= f.label "What do you want to do?", for: :question, class: "block text-lg font-medium text-gray-700" %>
+      <%= f.text_field :question, class: "h-20 focus:ring-green-300 focus:border-green-300 block min-w-full text-xl border-gray-300 rounded-md" %>
+      <%= f.submit "GO!", class: "bg-green-400 p-2 mt-2 border-green-600 rounded-md w-full text-gray-100 font-bold text-xl", data: { disable_with: "Submitting..." } %>
+    <% end %>
+  </div>
+</div>
