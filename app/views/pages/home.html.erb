@@ -1,1 +1,10 @@
-<%= render Prompt::Component.new(path: home_path) %>
+<div id="snip" data-controller="snip" class="bg-gray-50 min-h-screen w-full flex place-content-center place-items-center">
+  <div class="w-1/2">
+    <p class="text-3xl mb-4"><strong>Remind me how to</strong></p>
+    <div data-snip-target="form">
+      <%= render PromptFormComponent.new %>
+    </div>
+    <div data-snip-target="wait" hidden>
+    </div>
+  </div>
+</div>

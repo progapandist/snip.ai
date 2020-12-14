@@ -1,0 +1,7 @@
+  <%= form_with model: Prompt.new, method: :post, 
+                data: { type: "html", action: "ajax:success->snip#onPostSuccess" } do |f| %>
+    <%= f.text_field :text, class: "h-20 focus:ring-green-300 focus:border-green-300 block min-w-full text-xl border-gray-300 rounded-md transition-colors duration-200 ease-in", data: { snip_target: "field" } %>
+    <%= f.button class: "bg-green-400 p-2 mt-5 border-green-600 rounded-md w-full", data: { snip_target: "submit" } do %>
+      <span data-snip-target="buttonText" class="text-gray-100 font-bold text-2xl">Call the AI</span>
+    <% end %>
+  <% end %>
