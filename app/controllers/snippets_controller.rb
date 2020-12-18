@@ -9,7 +9,7 @@ class SnippetsController < ApplicationController
 
   def create
     @prompt = Prompt.find_or_create_by(prompt_params) # generate a slug for new record
-    SnippetJob.perform_later(@prompt, session.id.to_s)
+    SnippetJob.perform_later(@prompt, session.id.to_s) unless @prompt.text.empty?
   end
 
   private
