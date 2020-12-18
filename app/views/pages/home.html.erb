@@ -1,4 +1,8 @@
-<div id="snip" class="bg-gray-50 min-h-screen w-full flex place-content-center place-items-center">
+<div class="bg-gray-50 text-right p-4">
+    <%= link_to "All snippets", snippets_path, class: "bg-red-500 hover:bg-red-400 p-2 border-red-700 rounded-md text-white font-bold text-xl" %>
+</div>
+
+<div id="snip" class="bg-gray-50 min-h-screen w-full flex flex-col place-content-center place-items-center">
   <div class="w-1/2">
     <p class="text-3xl mb-4"><strong>🤔 Remind me how to...</strong></p>
     <div data-controller="snip" data-snip-target="form">

@@ -6,7 +6,7 @@ export default class extends Controller {
   onPostSend() {
     this.fieldTarget.disabled = true;
     this.submitTarget.disabled = true;
-    this.buttonTextTarget.innerText = "🤖...";
+    this.buttonTextTarget.innerText = "🤖 Just a moment...";
     this.buttonTextTarget.classList.add("animate-ping");
     this.fieldTarget.classList.add("bg-gray-100");
   }

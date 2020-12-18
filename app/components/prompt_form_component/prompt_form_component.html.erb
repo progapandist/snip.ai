@@ -6,7 +6,8 @@
                      data: { snip_target: "field" } 
     %>
     <div id="form-submit">
-    <%= f.button class: "bg-red-500 p-2 mt-5 border-red-700 rounded-md w-full", data: { snip_target: "submit" } do %>
+    <%= f.button class: "bg-red-500 p-2 mt-5 border-red-700 rounded-md w-full hover:bg-red-400", 
+                 data: { snip_target: "submit" } do %>
       <span data-snip-target="buttonText" class="text-gray-100 font-bold text-2xl">Ask the AI</span>
     <% end %>
     </div>

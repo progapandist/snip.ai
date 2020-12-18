@@ -1,5 +1,13 @@
-<ul>
-  <% @snippets.each do |snippet| %>
-    <li><%= link_to snippet.text, snippet %></li>
-  <% end %>
-</ul>
+<div class="bg-gray-50">
+  <div class="text-right p-4">
+      <%= link_to "Ask AI", home_path, class: "bg-red-500 hover:bg-red-400 p-2 border-red-700 rounded-md text-white font-bold text-xl" %>
+  </div>
+  
+  <div class="container mx-auto">
+    <ul>
+      <% @snippets.each do |snippet| %>
+        <li class="py-1"><%= link_to snippet.text, snippet, class: "hover:underline" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
