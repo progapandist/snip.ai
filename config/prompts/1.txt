@@ -1,0 +1,19 @@
+A code snippet for every HOWTO.
+HOWTO: Reverse the array in Python
+```python
+a = [1,2,3]
+b = a[::-1]
+```
+####
+HOWTO: Interpolate a string in JavaScript
+```js
+const name = "Charles Babbage"
+const myString = `Hello ${name}`;
+```
+####
+HOWTO: Iterate over all keys in a Ruby hash
+```rb
+person = { name: "Ada Lovelace", age: 21 }
+person.keys.each { |key| puts key }
+```
+####

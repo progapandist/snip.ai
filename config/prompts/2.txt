@@ -1,0 +1,19 @@
+A code snippet for every HOWTO.
+HOWTO: Code a function that takes two ints and returns their sum as an int in Go.
+```go
+package main
+import "fmt"
+func plus(a int, b int) int {
+    return a + b
+}
+func main() {
+    res := plus(1, 2)
+    fmt.Println("1+2 =", res)
+}
+```
+####
+HOWTO: Count the number of unique lines in a file in bash
+```bash
+cat file.txt | sort -u | wc -l
+```
+####

@@ -1,7 +1,13 @@
-  <%= form_with model: Prompt.new, method: :post, 
-                data: { type: "html", action: "ajax:success->snip#onPostSuccess" } do |f| %>
-    <%= f.text_field :text, class: "h-20 focus:ring-green-300 focus:border-green-300 block min-w-full text-xl border-gray-300 rounded-md transition-colors duration-200 ease-in", data: { snip_target: "field" } %>
-    <%= f.button class: "bg-green-400 p-2 mt-5 border-green-600 rounded-md w-full", data: { snip_target: "submit" } do %>
-      <span data-snip-target="buttonText" class="text-gray-100 font-bold text-2xl">Call the AI</span>
+  <%= form_with model: Prompt.new, url: snippets_path, method: :post, 
+                data: { type: "html", action: "ajax:send->snip#onPostSend" } do |f| %>
+    <%= f.text_field :text, 
+                     class: "h-20 focus:ring-blue-400 focus:border-blue-400 block min-w-full text-xl 
+                             border-gray-300 rounded-md transition-colors duration-200 ease-in", 
+                     data: { snip_target: "field" } 
+    %>
+    <div id="form-submit">
+    <%= f.button class: "bg-red-500 p-2 mt-5 border-red-700 rounded-md w-full", data: { snip_target: "submit" } do %>
+      <span data-snip-target="buttonText" class="text-gray-100 font-bold text-2xl">Ask the AI</span>
     <% end %>
+    </div>
   <% end %>

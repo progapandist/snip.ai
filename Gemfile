@@ -17,7 +17,7 @@ gem 'webpacker', github: "rails/webpacker", branch: "5-x-stable"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -34,6 +34,7 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', github: 'rails/web-console'
   gem 'listen', '~> 3.2'
+  gem 'httplog'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -41,3 +42,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "view_component", require: "view_component/engine"
 
+# Client for OpenAI GPT-3
+gem 'openai'
+gem 'friendly_id', '~> 5.4.0'
+
+gem "pg_search", "~> 2.3"
+
+gem "redcarpet", "~> 3.5"
+
+gem "cable_ready", "~> 4.4"

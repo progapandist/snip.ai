@@ -1,7 +1,7 @@
 class CreatePrompts < ActiveRecord::Migration[6.0]
   def change
     create_table :prompts do |t|
-      t.text :text
+      t.string :text
 
       t.timestamps
     end

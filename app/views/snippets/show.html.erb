@@ -1,0 +1,8 @@
+<div id="snip" class="bg-gray-50 min-h-screen w-full flex place-content-center place-items-center">
+  <div class="w-1/2">
+    <p class="text-3xl mb-4"><strong>Remind me how to:</strong> <%= @snippet.text %></p>
+    <div>
+       <%= render CodeBlockComponent.new(@snippet.code) %>
+    </div>
+  </div>
+</div>
