@@ -6,15 +6,15 @@ class AiCompletionService
   end
 
   def call
-    prompt = @training_prompt + "HOWTO #{@user_prompt}"
+    prompt = @training_prompt + "HOWTO: #{@user_prompt}"
     # TODO: Pass parameters from the outside
     answer = @client.completions(
       prompt: prompt,
       max_tokens: prompt.length + 300,
       stop: ["HOWTO:", "####"],
-      frequency_penalty: 0,
+      frequency_penalty: 0.2,
       presence_penalty: 0.08,
-      top_p: 0.1
+      temperature: 0.2
     )
     answer.choices.first.text.gsub("####", "")
   end
